@@ -11,6 +11,7 @@ function JobList({ jobs }) {
     setPage(value);
   };
   const pageCount = Math.ceil(jobs.length / limit);
+
   return (
     <>
       <Grid container spacing={2}>
@@ -26,6 +27,12 @@ function JobList({ jobs }) {
           color="primary"
           page={page}
           onChange={handleChange}
+          sx={{
+            background: "rgba(255,255,255,0.35)",
+            padding: "5px 5px",
+            borderRadius: "30px",
+            backdropFilter: "blur(15px)",
+          }}
         />
       </Box>
     </>
